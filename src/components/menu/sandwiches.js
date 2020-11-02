@@ -1,13 +1,13 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
-const ColdDrinks = () => {
+const Sandwiches = () => {
   const data = useStaticQuery(graphql`
   query {
-    allContentfulMenuItem(
+    allStrapiMenuItem(
       filter: {
-        category: {
-          title: {eq: "Cold Drinks"}
+        menu_category: {
+          slug: {eq: "sandwiches"}
         }
       }
     ) {
@@ -16,7 +16,7 @@ const ColdDrinks = () => {
           title
           id
           price
-          category{
+          menu_category{
             title
           }
         }
@@ -25,7 +25,7 @@ const ColdDrinks = () => {
   }
   `)
 
-  const items = data.allContentfulMenuItem.edges;
+  const items = data.allStrapiMenuItem.edges;
   return (
     <div>
       <p className="sample">SAMPLE MENU</p>
@@ -35,7 +35,7 @@ const ColdDrinks = () => {
             return (
               <li key={node.id} className="menu-item">
                 <h3>{node.title}</h3>
-                <span>£{node.price}</span>
+                <span>₪{node.price}</span>
               </li>
             )
           })
@@ -45,4 +45,4 @@ const ColdDrinks = () => {
   )
 }
 
-export default ColdDrinks;
+export default Sandwiches;

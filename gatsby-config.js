@@ -6,9 +6,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Cafe`,
+    title: `הפונדק של ג'ק`,
     description: `  `,
-    author: `Cristiano Crolla`,
+    author: `מאיר קרנש`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,16 +35,9 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACEID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `kelvinpocketcafe`, // Your Instagram
+        username: `chefnoded`, // Your Instagram
       },
     },
     {
@@ -58,9 +51,18 @@ module.exports = {
       options: {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
-    }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://punjack-backend.herokuapp.com`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: ['menu-item'],
+        loginData: {
+          identifier: '',
+          password: '',
+        },
+      },
+    },
   ],
 }
