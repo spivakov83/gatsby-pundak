@@ -58,6 +58,7 @@ module.exports = {
         apiURL: `https://punjack-backend.herokuapp.com`,
         queryLimit: 1000, // Default to 100
         contentTypes: ['menu-item'],
+        singleTypes:['homepage'],
         loginData: {
           identifier: '',
           password: '',
