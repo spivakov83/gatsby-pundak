@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `chefnoded`, // Your Instagram
+        username: `479113990`, // Your Instagram
       },
     },
     {
