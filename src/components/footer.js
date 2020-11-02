@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="hours">
           <h3>שעות</h3>
           <span>א-ה / 9-23</span>
-          <span>9-14</span>
+          <span>שישי / 9-14</span>
         </div>
         <div className="contact">
           <h3>ליצירת קשר</h3>
