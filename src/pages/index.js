@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="" />
       <section className="hero">
         <Img fluid={data.coffeeShop.childImageSharp.fluid} className="hero-image" />
       </section>
@@ -62,16 +62,16 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    coffeeShop: file(relativePath: { eq: "coffee-shop-exterior.jpg" }) {
+    coffeeShop: file(relativePath: { eq: "main.jpg" }) {
       ...fluidImage
     }
-    coffeePortrait: file(relativePath: { eq: "coffee-portrait.jpg" }) {
+    coffeePortrait: file(relativePath: { eq: "img2.jpg" }) {
       ...fluidImage
     }
-    latte: file(relativePath: { eq: "latte.jpg" }) {
+    latte: file(relativePath: { eq: "img1.jpg" }) {
       ...fluidImage
     }
-    coffeeBags: file(relativePath: { eq: "coffee-bags.jpg" }) {
+    coffeeBags: file(relativePath: { eq: "img3.jpg" }) {
       ...fluidImage
     }
     strapiHomepage {
