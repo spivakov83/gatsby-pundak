@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="הפונג'ק" />
       <section className="hero">
         <Img fluid={data.coffeeShop.childImageSharp.fluid} className="hero-image" />
       </section>
