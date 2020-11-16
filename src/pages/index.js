@@ -65,10 +65,10 @@ export const pageQuery = graphql`
     coffeeShop: file(relativePath: { eq: "main.jpg" }) {
       ...fluidImage
     }
-    coffeePortrait: file(relativePath: { eq: "img2.jpg" }) {
+    coffeePortrait: file(relativePath: { eq: "img1.jpg" }) {
       ...fluidImage
     }
-    latte: file(relativePath: { eq: "img1.jpg" }) {
+    latte: file(relativePath: { eq: "logo2.png" }) {
       ...fluidImage
     }
     coffeeBags: file(relativePath: { eq: "img3.jpg" }) {
