@@ -13,11 +13,12 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body style={{direction:'rtl'}} {...props.bodyAttributes}>
+      <body{...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
           id="___gatsby"
+          style={{direction:'rtl'}} 
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
