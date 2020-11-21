@@ -30,11 +30,11 @@ const Menu = () => {
     <section className="menu">
       <h2>התפריט שלנו</h2>
       <ul className="menu-headers">
-        <li className="menu-header" onClick={() => setMenuCategory('alaboker')}>עלהבוקר</li>
-        <li className="menu-header" onClick={() => setMenuCategory('fromsir')}>מהסיר</li>
-        <li className="menu-header" onClick={() => setMenuCategory('metugan')} >מטוגן</li>
-        <li className="menu-header" onClick={() => setMenuCategory('sandwiches')} >סנדוויצים</li>
-        <li className="menu-header" onClick={() => setMenuCategory('alaesh')} >על האש</li>
+        <li className="menu-header" onClick={() => setMenuCategory('alaboker')}>עלאבוקר</li>
+        <li className="menu-header" onClick={() => setMenuCategory('fromsir')}>ישר מהסיר</li>
+        <li className="menu-header" onClick={() => setMenuCategory('metugan')} >מטוגן ופריך </li>
+        <li className="menu-header" onClick={() => setMenuCategory('sandwiches')} >על הדרך</li>
+        <li className="menu-header" onClick={() => setMenuCategory('alaesh')} >עלהאש</li>
         <li className="menu-header" onClick={() => setMenuCategory('sweet')} >מתוקים</li>
       </ul>
       <SelectedCategory />
