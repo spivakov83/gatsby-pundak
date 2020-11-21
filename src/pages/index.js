@@ -22,7 +22,9 @@ const IndexPage = ({data}) => {
           {data.strapiHomepage.topText}
         </span>
         <div className="gallery-grid">
-          <Img fluid={data.latte.childImageSharp.fluid} className="gallery-img1" />
+          <Img fluid={data.logo.childImageSharp.fluid} imgStyle={{
+            objectFit: "fill"
+          }} className="gallery-img1" />
           <Img fluid={data.coffeeBags.childImageSharp.fluid} className="gallery-img2" />
           <Img fluid={data.coffeePortrait.childImageSharp.fluid} className="gallery-img3" />
         </div>
@@ -68,7 +70,7 @@ export const pageQuery = graphql`
     coffeePortrait: file(relativePath: { eq: "img1.jpg" }) {
       ...fluidImage
     }
-    latte: file(relativePath: { eq: "logo2.png" }) {
+    logo: file(relativePath: { eq: "logo2.png" }) {
       ...fluidImage
     }
     coffeeBags: file(relativePath: { eq: "img3.jpg" }) {
