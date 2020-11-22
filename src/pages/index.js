@@ -8,6 +8,7 @@ import Menu from '../components/menu/menu'
 import Instagram from '../components/instagram'
 import LeafletMap from '../components/leafletMap'
 import Footer from '../components/footer'
+import WhatsappBtn from "../components/WhatsappBtn/whatsapp-button"
 
 const IndexPage = ({data}) => {
 
@@ -22,9 +23,7 @@ const IndexPage = ({data}) => {
           {data.strapiHomepage.topText}
         </span>
         <div className="gallery-grid">
-          <Img fluid={data.logo.childImageSharp.fluid} imgStyle={{
-            objectFit: "fill"
-          }} className="gallery-img1" />
+          <Img fluid={data.logo.childImageSharp.fluid} className="gallery-img1" />
           <Img fluid={data.coffeeBags.childImageSharp.fluid} className="gallery-img2" />
           <Img fluid={data.coffeePortrait.childImageSharp.fluid} className="gallery-img3" />
         </div>
@@ -46,6 +45,7 @@ const IndexPage = ({data}) => {
         />
       }
       <Footer />
+      <WhatsappBtn/>
     </Layout>
   )
 }
