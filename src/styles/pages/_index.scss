@@ -118,3 +118,18 @@ h2 {
     height: 400px;
   }
 }
+
+
+.moved-container{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.moved-link{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
